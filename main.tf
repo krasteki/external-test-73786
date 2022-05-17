@@ -12,5 +12,9 @@ provider "external" {
 }
 
 data "external" "example" {
-  program = ["python3", "${path.module}/hello.py"]
+  program = ["python3", "hello.py"]
+
+   query = {
+    data = "Test123"
+  }
 }
