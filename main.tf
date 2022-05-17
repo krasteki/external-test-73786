@@ -7,6 +7,12 @@ terraform {
   }
 }
 
+resource "null_resource" "test" {
+  triggers = {
+    value = "${timestamp()}"
+  }
+}
+
 provider "external" {
   # Configuration options
 }
