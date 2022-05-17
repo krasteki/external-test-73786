@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     external = {
-      source = "hashicorp/external"
+      source  = "hashicorp/external"
       version = "2.2.2"
     }
   }
@@ -10,7 +10,6 @@ terraform {
 provider "external" {
   # Configuration options
 }
-
 
 data "external" "example" {
   program = ["python3", "${path.module}/hello.py"]
